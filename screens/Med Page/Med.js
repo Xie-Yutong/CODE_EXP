@@ -2,7 +2,6 @@ import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Text, View, Button, Platform } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
-const SymptomsData=require('../Med Page/Symptoms.json')
 import { useState } from 'react';
 import CheckBox from "expo-checkbox";
 
