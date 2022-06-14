@@ -30,7 +30,7 @@ export default function HomeScreen() {
           <Text style={styles.cardTitle}>Medical Centre follow-up</Text>
           <Text style={styles.cardSubtitle}>Click on ‘View Details’ to access the details of your session and obtain your e-medical certificate and/or excusal letter.</Text>
           <View style={styles.cardButton}>
-          <Button color="#558f6c" title="View Details"/>
+            <Button color="#558f6c" title="View Details"/>
           </View>
           <Text style={styles.cardTitle}>Medical Centre Booking</Text>
           <Text style={styles.cardSubtitle}>Your booking with [name of counsellor], on [dd/mm/yyyy time], [status, is pending/has been confirmed!]</Text>
