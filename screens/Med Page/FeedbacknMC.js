@@ -3,20 +3,33 @@ import { StyleSheet, TouchableOpacity, Text, View, Image } from 'react-native';
 
 function FeedbacknMC() {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Would you like to go to the Medical Centre?</Text>
+        <View style={{ flex: 1, justifyContent: 'center' }}>
+        <Text>You may find your e-medical certificate and/or excusal letter here.</Text>
         <TouchableOpacity 
-          style={styles.medcenbutton} 
-          onPress= {() => navigation.navigate("Symptoms")} title="Symptoms">
-            <Text style = {styles.yesButton}>Yes</Text>
+          style={styles.buttons}>
+            <Text style = {styles.feedbackButton}>Feedback</Text>
         </TouchableOpacity>
         <TouchableOpacity 
-          style={styles.medcenbutton} 
-          onPress= {() => navigation.navigate("Home")} title="Home Screen">
-            <Text style = {styles.noButton}>No</Text>
+          style={styles.buttons}>
+            <Text style = {styles.reportButton}>Report</Text>
         </TouchableOpacity>
       </View>
     );
 }
+
+const styles = StyleSheet.create({
+    buttons: {
+      backgroundColor: '#558F6C',
+      border: 1,
+      borderRadius: 15,
+      width: 370,
+      height: 46,
+      alignItems: 'center',
+      justifyContent: 'center',
+      top: 9,
+      margin: 4,
+    },
+  
+});
 
 export default FeedbacknMC;
