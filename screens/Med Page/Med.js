@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, TouchableOpacity, Text, View, Button } from 'react-native';
+import { StyleSheet, TouchableOpacity, Text, View, Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 import Symptom from '../../components/Symptom';
@@ -57,8 +57,14 @@ function HomeScreen() {
 function SubmissionScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Image source={require('../../assets/tick-solid.png')}></Image>
-    <Text>Submitted!</Text>
+      <View style={styles.submissionTop}>
+        <Image source={require('../../assets/tick-solid.png')}></Image>
+        <Text>Thank you for completing the checklist!</Text>
+      </View>
+
+    <Text>Your queue number:</Text>
+    <Text>Estimated waiting time:</Text>
+    <Text>Thank you for completing the checklist!</Text>
     </View>
   );
 }
