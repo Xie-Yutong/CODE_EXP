@@ -7,11 +7,16 @@ function MedScreen() {
   const navigation = useNavigation()
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Medical Centre</Text>
+        <Text>Confirm to go to Medical Centre?</Text>
         <TouchableOpacity 
-          style={styles.button} 
+          style={styles.medcenbutton} 
           onPress= {() => navigation.navigate("MedSecondScreen")} title="Second Screen">
-            <Text style = {styles.chatHistory}>View Chat History</Text>
+            <Text style = {styles.yesButton}>Yes</Text>
+        </TouchableOpacity>
+        <TouchableOpacity 
+          style={styles.medcenbutton} 
+          onPress= {() => navigation.navigate("MedSecondScreen")} title="Second Screen">
+            <Text style = {styles.noButton}>No</Text>
         </TouchableOpacity>
       </View>
     );
@@ -37,14 +42,14 @@ export default function MedStack() {
 }
 
 const styles = StyleSheet.create({
-  button: {
+  medcenbutton: {
     backgroundColor: '#558F6C',
     border: 1,
     borderRadius: 15,
-    position: 'absolute',
     width: 370,
     height: 46,
     alignItems: 'center',
+    justifyContent: 'center',
     top: 9,
     margin: 4,
   },
