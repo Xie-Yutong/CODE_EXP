@@ -28,7 +28,16 @@ function Symptoms() {
     <View style={styles.container}>
   
       <Text style={styles.sectionTitle}>Please tick all the applicable symptoms that you have experienced</Text>
-      <Symptom></Symptom>
+      <Symptom text={'Sore Throat'}></Symptom>
+      <Symptom text={'Cough'}></Symptom>
+      <Symptom text={'Runny Nose'}></Symptom>
+      <Symptom text={'Fever (Above 38℃)'}></Symptom>
+      <Symptom text={'Fever (38℃ and below)'}></Symptom>
+      <Symptom text={'Muscle Pain'}></Symptom>
+      <Symptom text={'Diarrhoea'}></Symptom>
+      <Symptom text={'Nausea'}></Symptom>
+      <Symptom text={'Vomiting'}></Symptom>
+      <Symptom text={'Others'}></Symptom>
       <Button title="Submit" style={styles.submitButton}></Button>
     </View>
   );

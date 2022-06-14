@@ -3,15 +3,15 @@ import { View, Text, StyleSheet } from 'react-native';
 import { useState } from 'react';
 import CheckBox from "expo-checkbox";
 
-const Symptom = () => {
-    const [agree1, setAgree1] = useState(false);
+const Symptom = (props) => {
+    const [agree, setAgree] = useState(false);
     return (
         <View style={styles.container}>
             <View style={styles.wrapper}>
-                <CheckBox value={agree1}
-                    onValueChange={() => setAgree1(!agree1)}
-                    color={agree1 ? "#558F6C" : undefined}></CheckBox>
-                <Text style={styles.text}>Sore Throat</Text>
+                <CheckBox value={agree}
+                    onValueChange={() => setAgree(!agree)}
+                    color={agree ? "#558F6C" : undefined}></CheckBox>
+                <Text style={styles.text}>{props.text}</Text>
             </View>
         </View>
     
