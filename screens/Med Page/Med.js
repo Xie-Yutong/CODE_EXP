@@ -1,7 +1,10 @@
 import * as React from 'react';
-import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, Text, View, Button, Platform } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
+const SymptomsData=require('../Med Page/Symptoms.json')
+import { useState } from 'react';
+import CheckBox from "expo-checkbox";
 
 function MedScreen() {
   const navigation = useNavigation()
@@ -10,7 +13,7 @@ function MedScreen() {
         <Text>Confirm to go to Medical Centre?</Text>
         <TouchableOpacity 
           style={styles.medcenbutton} 
-          onPress= {() => navigation.navigate("MedSecondScreen")} title="Second Screen">
+          onPress= {() => navigation.navigate("Symptoms")} title="Symptoms">
             <Text style = {styles.yesButton}>Yes</Text>
         </TouchableOpacity>
         <TouchableOpacity 
@@ -22,11 +25,77 @@ function MedScreen() {
     );
   }
 
-function MedSecondScreen() {
+function Symptoms() {
+  const [agree, setAgree] = useState(false);
   return (
-      <View style = {{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text>Medical Centre Second Page!</Text>
+    <View style={styles.container}>
+  
+      <Text style={styles.sectionTitle}>Please tick all the applicable symptoms that you have experienced</Text>
+      <View style={styles.wrapper}>
+        <CheckBox value={agree}
+          onValueChange={() => setAgree(!agree)}
+          color={agree ? "#558F6C" : undefined}></CheckBox>
+        <Text style={styles.text}>Sore Throat</Text>
       </View>
+      <View style={styles.wrapper}>
+        <CheckBox value={agree}
+          onValueChange={() => setAgree(!agree)}
+          color={agree ? "#558F6C" : undefined}></CheckBox>
+        <Text style={styles.text}>Cough</Text>
+      </View>
+      <View style={styles.wrapper}>
+        <CheckBox value={agree}
+          onValueChange={() => setAgree(!agree)}
+          color={agree ? "#558F6C" : undefined}></CheckBox>
+        <Text style={styles.text}>Runny Nose</Text>
+      </View>
+      <View style={styles.wrapper}>
+        <CheckBox value={agree}
+          onValueChange={() => setAgree(!agree)}
+          color={agree ? "#558F6C" : undefined}></CheckBox>
+        <Text style={styles.text}>Fever (Above 38℃)</Text>
+      </View>
+      <View style={styles.wrapper}>
+        <CheckBox value={agree}
+          onValueChange={() => setAgree(!agree)}
+          color={agree ? "#558F6C" : undefined}></CheckBox>
+        <Text style={styles.text}>Fever (38℃ and below)</Text>
+      </View>
+      <View style={styles.wrapper}>
+        <CheckBox value={agree}
+          onValueChange={() => setAgree(!agree)}
+          color={agree ? "#558F6C" : undefined}></CheckBox>
+        <Text style={styles.text}>Muscle Pain</Text>
+      </View>
+      <View style={styles.wrapper}>
+        <CheckBox value={agree}
+          onValueChange={() => setAgree(!agree)}
+          color={agree ? "#558F6C" : undefined}></CheckBox>
+        <Text style={styles.text}>Vomiting</Text>
+      </View>
+      <View style={styles.wrapper}>
+        <CheckBox value={agree}
+          onValueChange={() => setAgree(!agree)}
+          color={agree ? "#558F6C" : undefined}></CheckBox>
+        <Text style={styles.text}>Diarrhoea</Text>
+      </View>
+      <View style={styles.wrapper}>
+        <CheckBox value={agree}
+          onValueChange={() => setAgree(!agree)}
+          color={agree ? "#558F6C" : undefined}></CheckBox>
+        <Text style={styles.text}>Nausea</Text>
+      </View>
+      <View style={styles.wrapper}>
+        <CheckBox value={agree}
+          onValueChange={() => setAgree(!agree)}
+          color={agree ? "#558F6C" : undefined}></CheckBox>
+        <Text style={styles.text}>Others</Text>
+      </View>
+      <Button color={"#558F6C"}
+        title="Submit"
+        disabled={!agree}
+      />
+    </View>
   );
 }
 
@@ -44,7 +113,7 @@ export default function MedStack() {
   return (
       <Stack.Navigator>
           <Stack.Screen name = "Medical Centre Page" component = {MedScreen} />
-          <Stack.Screen name = "MedSecondScreen" component = {MedSecondScreen} />
+          <Stack.Screen name = "Symptoms" component = {Symptoms} />
           <Stack.Screen name = "HomeScreen" component = {HomeScreen} />
       </Stack.Navigator>
   )
@@ -62,4 +131,19 @@ const styles = StyleSheet.create({
     top: 9,
     margin: 4,
   },
+
+  sectionTitle: {
+    paddingTop: 20,
+    paddingHorizontal: 20,
+  },
+
+  wrapper: {
+    flexDirection: "row",
+    paddingTop: 20,
+    paddingHorizontal: 20,
+  },
+
+  text: {
+    paddingHorizontal: 10,
+  }
 })
