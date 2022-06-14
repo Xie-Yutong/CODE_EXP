@@ -86,7 +86,7 @@ export default function MedStack() {
           <Stack.Screen name = "Medical Centre Page" component = {MedScreen} />
           <Stack.Screen name = "Symptoms" component = {Symptoms} />
           <Stack.Screen name = "Home" component = {HomeScreen} />
-          <Stack.Screen name = "Submission" component = {SubmissionScreen} />
+          <Stack.Screen name = "SubmissionScreen" component = {SubmissionScreen} />
       </Stack.Navigator>
   )
 }
