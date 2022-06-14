@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 export default function HomeScreen({ navigation }) {
     return (
       <View>
-        <View style={{ flex: 1, justifyContent: 'left', alignItems: 'left' }}>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <View style={styles.topbar}>
             <Text style={styles.title}>Welcome</Text>
           </View>
@@ -24,7 +24,7 @@ export default function HomeScreen({ navigation }) {
 
 const styles = StyleSheet.create({
   title: {
-    fontFamily: "Inter",
+    fontFamily: "sans-serif",
     fontSize: 24,
     lineHeight: 29,
     marginLeft: 8,
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 22,
-    fontFamily: "Inter",
+    fontFamily: "sans-serif",
     lineHeight: 27
   },
   main: {
