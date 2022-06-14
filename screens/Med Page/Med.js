@@ -17,7 +17,7 @@ function MedScreen() {
         </TouchableOpacity>
         <TouchableOpacity 
           style={styles.medcenbutton} 
-          onPress= {() => navigation.navigate("HomeScreen")} title="Home Screen">
+          onPress= {() => navigation.navigate("Home")} title="Home Screen">
             <Text style = {styles.noButton}>No</Text>
         </TouchableOpacity>
       </View>
@@ -39,7 +39,8 @@ function Symptoms() {
       <Symptom text={'Nausea'}></Symptom>
       <Symptom text={'Vomiting'}></Symptom>
       <Symptom text={'Others'}></Symptom>
-      <TouchableOpacity style={styles.submitButton}>
+      <TouchableOpacity style={styles.submitButton}
+      onPress= {() => navigation.navigate("SubmissionScreen")} title="SubmissionScreen">
         <Text>SUBMIT</Text>
       </TouchableOpacity>
     </View>
@@ -52,6 +53,15 @@ function HomeScreen() {
   );
 }
 
+function SubmissionScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text>Submitted!</Text>
+    </View>
+  );
+}
+
+
 const Stack = createStackNavigator()
 
 export default function MedStack() {
@@ -60,6 +70,7 @@ export default function MedStack() {
           <Stack.Screen name = "Medical Centre Page" component = {MedScreen} />
           <Stack.Screen name = "Symptoms" component = {Symptoms} />
           <Stack.Screen name = "Home" component = {HomeScreen} />
+          <Stack.Screen name = "SubmissionScreen" component = {SubmissionScreen} />
       </Stack.Navigator>
   )
 }
