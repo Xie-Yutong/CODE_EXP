@@ -3,6 +3,7 @@ import { StyleSheet, TouchableOpacity, Text, View, Button } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 import Symptom from '../../components/Symptom';
+import Home from '../Menu Page/Home';
 
 function MedScreen() {
   const navigation = useNavigation()
@@ -38,16 +39,16 @@ function Symptoms() {
       <Symptom text={'Nausea'}></Symptom>
       <Symptom text={'Vomiting'}></Symptom>
       <Symptom text={'Others'}></Symptom>
-      <Button title="Submit" style={styles.submitButton}></Button>
+      <TouchableOpacity style={styles.submitButton}>
+        <Text>SUBMIT</Text>
+      </TouchableOpacity>
     </View>
   );
 }
 
 function HomeScreen() {
   return (
-      <View style = {{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text>Go to home page!</Text>
-      </View>
+      <Home></Home>
   );
 }
 
@@ -58,7 +59,7 @@ export default function MedStack() {
       <Stack.Navigator>
           <Stack.Screen name = "Medical Centre Page" component = {MedScreen} />
           <Stack.Screen name = "Symptoms" component = {Symptoms} />
-          <Stack.Screen name = "HomeScreen" component = {HomeScreen} />
+          <Stack.Screen name = "Home" component = {HomeScreen} />
       </Stack.Navigator>
   )
 }
@@ -81,19 +82,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
 
-  wrapper: {
-    flexDirection: "row",
-    paddingTop: 20,
-    paddingHorizontal: 20,
-  },
-
-  text: {
-    paddingHorizontal: 10,
-  },
-
   submitButton: {
-    color: "#558F6C",
-    paddingHorizontal: 20,
+    backgroundColor: '#558F6C',
+    border: 1,
     borderRadius: 15,
+    width: 370,
+    height: 46,
+    alignItems: 'center',
+    justifyContent: 'center',
+    top: 9,
+    margin: 4,
   }
 })
