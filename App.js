@@ -31,13 +31,13 @@ export default function App() {
             }
             return <Fontisto name={iconName} size={size} color={color} />;
           },
-         tabBarActiveTintColor: "navy",
+         tabBarActiveTintColor: "#558F6C",
          tabBarInactiveTintColor: "gray",
         })}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Paracounsellor" options={{headerShown: false}} component={ParaScreen} />
-        <Tab.Screen name="Medical Centre" component={MedScreen} />
+        <Tab.Screen name="Medical Centre" options={{headerShown: false}} component={MedScreen} />
         <Tab.Screen name="Profile" component={ProfileScreen} />
       </Tab.Navigator>
     </NavigationContainer>
