@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, TouchableOpacity, Text, View, Button, Platform } from 'react-native';
+import { StyleSheet, TouchableOpacity, Text, View, Button } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 import Symptom from '../../components/Symptom';
@@ -24,7 +24,6 @@ function MedScreen() {
   }
 
 function Symptoms() {
-  
   return (
     <View style={styles.container}>
   
