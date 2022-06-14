@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: "Inter",
     fontSize: 24,
-    fontWeight: 400,
     lineHeight: 29,
     marginLeft: 8,
     marginBottom: 18
