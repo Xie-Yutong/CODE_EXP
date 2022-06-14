@@ -62,10 +62,15 @@ function SubmissionScreen() {
         <Text>Thank you for completing the checklist!</Text>
       </View>
 
-    <Text>Your queue number:</Text>
-    <Text>Estimated waiting time:</Text>
-    <Text>Thank you for completing the checklist!</Text>
-    </View>
+      <View>
+        <Text>Your queue number:</Text>
+        <Text>102</Text>
+        <Text>Estimated waiting time:</Text>
+        <Text>20 minutes</Text>
+      </View>
+
+      
+      </View>
   );
 }
 
