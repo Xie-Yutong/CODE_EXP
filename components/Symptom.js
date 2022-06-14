@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { useState } from 'react';
 import CheckBox from "expo-checkbox";
 
-const Symptoms = () => {
+const Symptom = () => {
     const [agree1, setAgree1] = useState(false);
     return (
         <View style={styles.container}>

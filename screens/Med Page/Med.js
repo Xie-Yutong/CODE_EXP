@@ -2,7 +2,7 @@ import * as React from 'react';
 import { StyleSheet, TouchableOpacity, Text, View, Button, Platform } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
-import Symptoms from '../../components/Symptoms';
+import Symptom from '../../components/Symptom';
 
 function MedScreen() {
   const navigation = useNavigation()
@@ -29,7 +29,7 @@ function Symptoms() {
     <View style={styles.container}>
   
       <Text style={styles.sectionTitle}>Please tick all the applicable symptoms that you have experienced</Text>
-      <Symptoms></Symptoms>
+      <Symptom></Symptom>
       <Button title="Submit" style={styles.submitButton}></Button>
     </View>
   );
