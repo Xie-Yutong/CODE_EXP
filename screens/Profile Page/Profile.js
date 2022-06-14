@@ -14,17 +14,7 @@ function ProfileScreen () {
     return (
       <View style={{alignItems:'center'}}>
         <View style={{ flex: 1, alignItems: 'center'}}>
-          <Text style={{
-            fontSize:24, 
-            fontWeight:700, 
-            fontFamily:"inter", 
-            textDecorationLine: 'underline', 
-            marginTop:38, 
-            marginBottom:14,
-            textShadowColor: 'rgba(0, 0, 0, 0.25)',
-            textShadowOffset: {width: -4, height: 4},
-            textShadowRadius: 4
-          }} >User Profile</Text>
+          <Text style={styles.titletext}>User Profile</Text>
         </View>
         <View style={{alignItems:"center"}}>
           <img 
@@ -66,7 +56,7 @@ function ProfileScreen () {
 function AppointmentsScreen () {
   return (
     <View>
-      <Text style={{alignItems:'center'}}>appointments ig</Text>;
+      <Text style={styles.titletext}>All Appointments</Text>;
     </View>
   );
 }
@@ -84,6 +74,17 @@ export default function ProfileStack () {
 };
 
 const styles = StyleSheet.create({
+  titletext:{
+    fontSize:24, 
+    fontWeight:700, 
+    fontFamily:"inter", 
+    textDecorationLine: 'underline', 
+    marginTop:38, 
+    marginBottom:14,
+    textShadowColor: 'rgba(0, 0, 0, 0.25)',
+    textShadowOffset: {width: -4, height: 4},
+    textShadowRadius: 4
+  },
   button: {
     width: 300,
     height: 55,
