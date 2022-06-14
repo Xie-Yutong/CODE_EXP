@@ -15,7 +15,7 @@ function MedScreen() {
         </TouchableOpacity>
         <TouchableOpacity 
           style={styles.medcenbutton} 
-          onPress= {() => navigation.navigate("MedSecondScreen")} title="Second Screen">
+          onPress= {() => navigation.navigate("HomeScreen")} title="Home Screen">
             <Text style = {styles.noButton}>No</Text>
         </TouchableOpacity>
       </View>
@@ -30,6 +30,14 @@ function MedSecondScreen() {
   );
 }
 
+function HomeScreen() {
+  return (
+      <View style = {{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+          <Text>Go to home page!</Text>
+      </View>
+  );
+}
+
 const Stack = createStackNavigator()
 
 export default function MedStack() {
@@ -37,6 +45,7 @@ export default function MedStack() {
       <Stack.Navigator>
           <Stack.Screen name = "Medical Centre Page" component = {MedScreen} />
           <Stack.Screen name = "MedSecondScreen" component = {MedSecondScreen} />
+          <Stack.Screen name = "HomeScreen" component = {HomeScreen} />
       </Stack.Navigator>
   )
 }
