@@ -1,43 +1,31 @@
-import * as React from 'react';
+import React from 'react';
 import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
-//import { Content, Body, Left, Right, Thumbnail, ListItem, Container, NativeBaseProvider } from 'native-base';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 import 'react-native-gesture-handler';
 import SearchBar from './SearchBar';
 import Screen from './Screen';
 import { FontAwesome } from '@expo/vector-icons'; 
+import CounsellorList from './CounsellorList';
 
 function ParaScreen () {
   const navigation = useNavigation()
   return (
-//    <NativeBaseProvider>
-      <View style = {{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <TouchableOpacity 
-          style={styles.button} 
-          onPress= {() => navigation.navigate("ParaSecondScreen")} title="Second Screen">
-            <Text style = {styles.chatHistory}>View Chat History</Text>
-        </TouchableOpacity>
-        <Screen>
-          <SearchBar/>
-        </Screen>
-        <FontAwesome style={styles.SearchIcon}name="search" size={24} color="black" />
-        <Text style={styles.Para}>List of Paracounsellors</Text>
-        {/* <Container>
-          <Content>
-            <ListItem avatar>
-              <Left>
-                <Thumbnail source={{uri: 'uri here'}}/>
-              </Left>
-              <Body>
-                <Text>Name</Text>
-                <Text note>Address</Text>
-              </Body>
-            </ListItem>
-          </Content>
-        </Container> */}
-      </View>
-//    </NativeBaseProvider>
+    <View style = {{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <TouchableOpacity 
+        style={styles.button} 
+        onPress= {() => navigation.navigate("ParaSecondScreen")} title="Second Screen">
+          <Text style = {styles.chatHistory}>View Chat History</Text>
+      </TouchableOpacity>
+
+      <Screen>
+        <SearchBar/>
+      </Screen>
+      <FontAwesome style={styles.SearchIcon}name="search" size={24} color="black" />
+
+      <Text style={styles.Para}>List of Paracounsellors</Text>
+      <CounsellorList></CounsellorList>
+    </View>
   );
 }
 
