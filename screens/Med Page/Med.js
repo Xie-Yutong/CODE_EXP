@@ -58,18 +58,16 @@ function SubmissionScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <View style={styles.submissionTop}>
-        <Image source={require('../../assets/tick-solid.png')}></Image>
-        <Text>Thank you for completing the checklist!</Text>
+        <Image style={styles.subImage} source={require('../../assets/tick-solid.png')}></Image>
+        <Text style={styles.subTYText}>Thank you for completing the checklist!</Text>
       </View>
 
-      <View>
-        <Text>Your queue number:</Text>
-        <Text>102</Text>
-        <Text>Estimated waiting time:</Text>
-        <Text>20 minutes</Text>
+      <View style={styles.submissionBottom}>
+        <Text style={styles.subHeader}>Your queue number:</Text>
+        <Text style={styles.QNo}>102</Text>
+        <Text style={styles.subHeader}>Estimated waiting time:</Text>
+        <Text style={styles.Ewtime}>20 minutes</Text>
       </View>
-
-      
       </View>
   );
 }
@@ -116,5 +114,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     top: 9,
     margin: 4,
-  }
+  },
+
+  submissionBottom: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  submissionTop: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  subImage: {},
+  subHeader: {},
+
+
 })
