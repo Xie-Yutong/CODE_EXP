@@ -25,6 +25,7 @@ function MedScreen() {
   }
 
 function Symptoms() {
+  const navigation = useNavigation()
   return (
     <View style={styles.container}>
   
@@ -56,6 +57,7 @@ function HomeScreen() {
 function SubmissionScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Image source={require('../../assets/tick-solid.png')}></Image>
     <Text>Submitted!</Text>
     </View>
   );
