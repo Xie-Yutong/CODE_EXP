@@ -9,7 +9,7 @@ function MedScreen() {
   const navigation = useNavigation()
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Confirm to go to Medical Centre?</Text>
+        <Text>Would you like to go to the Medical Centre?</Text>
         <TouchableOpacity 
           style={styles.medcenbutton} 
           onPress= {() => navigation.navigate("Symptoms")} title="Symptoms">
