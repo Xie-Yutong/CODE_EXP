@@ -3,19 +3,10 @@ import { Button, Text, View, StyleSheet, Image, TouchableOpacity } from 'react-n
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import icon from './profileicon.jpeg';
 import { useNavigation } from '@react-navigation/native';
-//import { LinearGradient } from 'expo-linear-gradient';
 
 function ProfileScreen () {
   const navigation = useNavigation()
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Image style={styles.soldier} source={require('../../assets/soldier.png')}></Image>
-        <Text>Profile screen</Text>
-
-        <Button color="#558f6c"
-          title="Go to Details"
-          onPress={() => navigation.navigate('Details')}
-        />
       <View style={{alignItems:'center'}}>
         <View style={{alignItems: 'center'}}>
           <Text style={styles.titletext}>User Profile</Text>
@@ -53,7 +44,6 @@ function ProfileScreen () {
           </TouchableOpacity>
         </View>
       </View>
-      </View>
     )
   }
 
@@ -73,6 +63,15 @@ function AppointmentsScreen () {
           <View style={{flex:1, marginTop:10}}>
             <Text style={styles.aptmtupcoming}>Upcoming</Text>
           </View>
+        </View>
+        <View style={{flexDirection:"row"}}>
+          <View style={{flex:2, marginTop:10}}>
+            <Text style={styles.aptmts}>Officer 2LT: Andy</Text>
+            <Text style={styles.aptmts}>18/1/2022</Text>
+          </View>
+          <View style={{flex:1, marginTop:10}}>
+            <Text style={styles.aptmtcompleted}>Completed</Text>
+        </View>
         </View>
       </View>
     </View>
@@ -203,15 +202,3 @@ const styles = StyleSheet.create({
 
 
 
-{/*<LinearGradient
-colors={['#c0392b', '#f1c40f']}
-start={{x: 0, y: 0.5}}
-end={{x: 1, y: 1}}
-style={styles.button}
->
-  <TouchableOpacity 
-    style={styles.button} 
-    onPress= {() => navigation.navigate("Appointments")} title="Appointmentss">
-    <Text>All Appointments</Text>
-  </TouchableOpacity>  
-</LinearGradient> */}
