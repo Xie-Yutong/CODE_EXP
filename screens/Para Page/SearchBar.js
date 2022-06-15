@@ -3,14 +3,14 @@ import {View, TextInput, StyleSheet} from 'react-native';
 
 const SearchBar = () => {
     return (
-        <View style={styles.container}>
+        <View style={styles.button}>
             <TextInput style={styles.searchInput} placeholder='Search the respective camp here...'/>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
+    button: {
         position: 'absolute',
         width: 370,
         height: 46,
