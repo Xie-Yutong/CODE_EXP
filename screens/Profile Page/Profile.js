@@ -13,7 +13,7 @@ function ProfileScreen () {
   const navigation = useNavigation()
     return (
       <View style={{alignItems:'center'}}>
-        <View style={{ flex: 1, alignItems: 'center'}}>
+        <View style={{alignItems: 'center'}}>
           <Text style={styles.titletext}>User Profile</Text>
         </View>
         <View style={{alignItems:"center"}}>
@@ -39,13 +39,13 @@ function ProfileScreen () {
             <Text style={styles.infotextlast}>Contact number: 0000 0000</Text>
             <Text style={styles.biotitle}>Bio</Text>
             <View style={styles.container2}>
-              <Text style={styles.infotextfirst}>This user has not said anything about themselves...</Text>
+              <Text style={styles.biotext}>This user has not said anything about themselves...</Text>
             </View>
           </View>
         </View>
         <View>
           <TouchableOpacity>
-              <Text style={{fontFamily:'Inter', fontSize:14, fontWeight:400, fontStyle:'italic', textDecorationLine:'underline', color:'#2200CC', marginTop:5}}>Edit your profile</Text>
+              <Text style={{fontFamily:'Inter', fontSize:14, fontStyle:'italic', textDecorationLine:'underline', color:'#2200CC', marginTop:5}}>Edit your profile</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -56,7 +56,21 @@ function ProfileScreen () {
 function AppointmentsScreen () {
   return (
     <View>
-      <Text style={styles.titletext}>All Appointments</Text>;
+      <View style={{alignItems:'center', height:114}}>
+        <Text style={styles.titletext}>All Appointments</Text>
+      </View>
+
+      <View style={{height:622, width:340}}>
+        <View style={{flexDirection:"row"}}>
+          <View style={{flex:2, marginTop:10}}>
+            <Text style={styles.aptmts}>Officer 2LT: Andy</Text>
+            <Text style={styles.aptmts}>12/7/2022</Text>
+          </View>
+          <View style={{flex:1, marginTop:10}}>
+            <Text style={styles.aptmtupcoming}>Upcoming</Text>
+          </View>
+        </View>
+      </View>
     </View>
   );
 }
@@ -102,14 +116,12 @@ const styles = StyleSheet.create({
   },
   infotext:{
     fontFamily:"Inter",
-    fontWeight:400,
     fontSize:16,
     marginLeft:20,
     textAlign:"left",
   },
   infotextfirst:{
     fontFamily:"Inter",
-    fontWeight:400,
     fontSize:16,
     marginLeft:20,
     marginTop:20,
@@ -117,7 +129,6 @@ const styles = StyleSheet.create({
   },
   infotextlast:{
     fontFamily:"Inter",
-    fontWeight:400,
     fontSize:16,
     marginLeft:20,
     marginBottom:25,
@@ -147,12 +158,38 @@ const styles = StyleSheet.create({
   },
   biotext:{
     fontFamily:"Inter",
-    fontWeight:400,
     fontSize:16,
     marginLeft:15,
     marginRight:15,
     marginTop:15,
     textAlign:"left",
+  },
+  aptmts: {
+    fontFamily:"Inter",
+    fontWeight:600,
+    fontSize:18,
+    textAlign:'left'
+  },
+  aptmtupcoming: {
+    fontFamily:"Inter",
+    fontWeight:600,
+    fontSize:18,
+    textAlign:'left',
+    color:"#EF821E",
+  },
+  aptmtcancelled: {
+    fontFamily:"Inter",
+    fontWeight:600,
+    fontSize:18,
+    textAlign:'left',
+    color:"#FF000",
+  },
+  aptmtcompleted: {
+    fontFamily:"Inter",
+    fontWeight:600,
+    fontSize:18,
+    textAlign:'left',
+    color:"#7B10C",
   },
 })
 
