@@ -31,6 +31,7 @@ function ParaScreen () {
         onPress= {() => navigation.navigate("ParaThirdScreen")} title="Paracounsellor1">
           <Text style = {styles.counsellorInfo}>2LT John Smith</Text>
           <Text style = {{color:'white'}}>5 Years of counselling experience.</Text>
+          <Text style = {{color:'white'}}>Kranji Camp I</Text>
       </TouchableOpacity>
 
       <TouchableOpacity 
@@ -38,6 +39,7 @@ function ParaScreen () {
         onPress= {() => navigation.navigate("ParaFourthScreen")} title="Paracounsellor2">
           <Text style = {styles.counsellorInfo}>2LT Andy Lim</Text>
           <Text style = {{color:'white'}}>3 Years of counselling experience.</Text>
+          <Text style = {{color:'white'}}>Kranji Camp II</Text>
       </TouchableOpacity>
 
       <TouchableOpacity 
@@ -45,6 +47,7 @@ function ParaScreen () {
         onPress= {() => navigation.navigate("ParaFifthScreen")} title="Paracounsellor3">
           <Text style = {styles.counsellorInfo}>2LT Cindy Lee</Text>
           <Text style = {{color:'white'}}>2 Years of counselling experience.</Text>
+          <Text style = {{color:'white'}}>Kranji Camp III</Text>
       </TouchableOpacity>
     </View>
   );
@@ -210,7 +213,7 @@ const styles = StyleSheet.create({
   counsellor1: {
     position: 'absolute',
     width: 370,
-    height: 100,
+    height: 110,
     left: 9,
     top: 200,
     borderRadius: 15,
@@ -224,7 +227,7 @@ const styles = StyleSheet.create({
   counsellor2: {
     position: 'absolute',
     width: 370,
-    height: 100,
+    height: 110,
     left: 9,
     top: 330,
     borderRadius: 15,
@@ -238,7 +241,7 @@ const styles = StyleSheet.create({
   counsellor3: {
     position: 'absolute',
     width: 370,
-    height: 100,
+    height: 110,
     left: 9,
     top: 460,
     borderRadius: 15,

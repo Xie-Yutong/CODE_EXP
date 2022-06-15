@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Button, Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import icon from './profileicon.jpeg';
 import { useNavigation } from '@react-navigation/native';
+import { Ionicons } from '@expo/vector-icons'; 
 
 function ProfileScreen () {
   const navigation = useNavigation()
@@ -12,10 +12,7 @@ function ProfileScreen () {
           <Text style={styles.titletext}>User Profile</Text>
         </View>
         <View style={{alignItems:"center"}}>
-          <img 
-            style={{width:150, height:150, alignItem:'center'}}
-            src={icon}
-          />
+          <Ionicons style={{fontSize: 100}} name="person-circle" size={24} color="black" />
         </View>
         <View style={{marginTop:22}}>
           <TouchableOpacity 
@@ -32,7 +29,7 @@ function ProfileScreen () {
             <Text style={styles.infotext}>Unit: 1 SIR</Text>
             <Text style={styles.infotext}>Email Address: bobzhang@gmail.com</Text>
             <Text style={styles.infotextlast}>Contact number: 1234 5678</Text>
-            <Text style={styles.biotitle}>Bio</Text>
+            <Text style={styles.biotitle}>Bio:</Text>
             <View style={styles.container2}>
               <Text style={styles.biotext}>This user has not said anything about themselves...</Text>
             </View>
@@ -54,10 +51,10 @@ function AppointmentsScreen () {
         <Text style={styles.titletext}>All Appointments</Text>
       </View>
 
-      <View style={{height:622, width:340}}>
+      <View style={{height:622, width:340, paddingLeft: 50}}>
         <View style={{flexDirection:"row"}}>
           <View style={{flex:2, marginTop:10}}>
-            <Text style={styles.aptmts}>Officer 2LT: Andy</Text>
+            <Text style={styles.aptmts}>Officer 2LT: Andy Lim</Text>
             <Text style={styles.aptmts}>12/7/2022</Text>
           </View>
           <View style={{flex:1, marginTop:10}}>
@@ -66,12 +63,21 @@ function AppointmentsScreen () {
         </View>
         <View style={{flexDirection:"row"}}>
           <View style={{flex:2, marginTop:10}}>
-            <Text style={styles.aptmts}>Officer 2LT: Andy</Text>
+            <Text style={styles.aptmts}>Officer 2LT: Andy Lim</Text>
             <Text style={styles.aptmts}>18/1/2022</Text>
           </View>
           <View style={{flex:1, marginTop:10}}>
             <Text style={styles.aptmtcompleted}>Completed</Text>
+          </View>
         </View>
+        <View style={{flexDirection:"row"}}>
+          <View style={{flex:2, marginTop:10}}>
+            <Text style={styles.aptmts}>Officer 2LT: Andy Lim</Text>
+            <Text style={styles.aptmts}>22/2/2022</Text>
+          </View>
+          <View style={{flex:1, marginTop:10}}>
+            <Text style={styles.aptmtcancelled}>Cancelled</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -122,7 +128,7 @@ const styles = StyleSheet.create({
     fontWeight:'400',
     fontSize:16,
     marginLeft:20,
-    textAlign:"left",
+    alignSelf: 'flex-start',
   },
   infotextfirst:{
     fontFamily:"Inter",
@@ -130,7 +136,7 @@ const styles = StyleSheet.create({
     fontSize:16,
     marginLeft:20,
     marginTop:20,
-    textAlign:"left",
+    alignSelf: 'flex-start',
   },
   infotextlast:{
     fontFamily:"Inter",
@@ -138,7 +144,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 20,
     marginBottom: 25,
-    textAlign:"left",
+    alignSelf: 'flex-start',
   },
   container:{
     marginTop: 40,
@@ -146,14 +152,15 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems:"center",
     height: 330,
-    width: 300
+    width: 300,
+    justifyContent: 'space-between'
   },
   container2:{
-    marginTop: 20,
     backgroundColor: "#b9faf7",
     borderRadius: 15,
     height: 100,
     width: 265,
+    marginBottom: 20,
   },
   biotitle:{
     fontFamily:"Inter",
@@ -161,6 +168,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginLeft: 20,
     marginTop: 7,
+    alignSelf: 'flex-start',
   },
   biotext:{
     fontFamily:"Inter",
@@ -173,27 +181,28 @@ const styles = StyleSheet.create({
   },
   aptmts: {
     fontFamily:"Inter",
-    fontWeight:600,
+    fontWeight:'600',
     fontSize:18,
-    textAlign:'left'
+    textAlign:'left',
+    paddingleft: 10,
   },
   aptmtupcoming: {
     fontFamily:"Inter",
-    fontWeight:600,
+    fontWeight:'600',
     fontSize:18,
     textAlign:'left',
     color:"#EF821E",
   },
   aptmtcancelled: {
     fontFamily:"Inter",
-    fontWeight:600,
+    fontWeight:'600',
     fontSize:18,
     textAlign:'left',
-    color:"#FF000",
+    color:"red",
   },
   aptmtcompleted: {
     fontFamily:"Inter",
-    fontWeight:600,
+    fontWeight:'600',
     fontSize:18,
     textAlign:'left',
     color:"#37B10C",

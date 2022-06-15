@@ -38,7 +38,7 @@ export default function App() {
         <Tab.Screen name="Home" options={{headerShown: false}} component={HomeScreen} />
         <Tab.Screen name="Paracounsellor" options={{headerShown: false}} component={ParaScreen} />
         <Tab.Screen name="Medical Centre" options={{headerShown: false}} component={MedScreen} />
-        <Tab.Screen name="Profile" component={ProfileScreen} />
+        <Tab.Screen name="Profile" options={{headerShown: false}} component={ProfileScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
