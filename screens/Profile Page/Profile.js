@@ -196,7 +196,7 @@ const styles = StyleSheet.create({
     fontWeight:600,
     fontSize:18,
     textAlign:'left',
-    color:"#7B10C",
+    color:"#37B10C",
   },
 })
 
