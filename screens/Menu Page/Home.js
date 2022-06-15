@@ -213,8 +213,8 @@ const styles = StyleSheet.create({
   MedButton: {
     width: 210,
     borderRadius: 14,
-    marginTop: 3,
-    marginLeft: '36%'
+    marginTop: 9,
+    marginLeft: '28%'
   }
 });
 
